@@ -3,33 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cristian B.</title>
+  <title>Your Name</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome for social icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <!-- Font + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="center-content">
-    <h1>Cristian B.</h1>
+  <!-- Welcome overlay -->
+  <div class="welcome-screen" id="welcome">
+    <h2>Welcome!</h2>
+    <button onclick="enterSite()">Continue</button>
+  </div>
+
+  <!-- Main content (hidden at first) -->
+  <div class="center-content hidden" id="main-content">
+    <h1>Your Name</h1>
     <div class="socials">
-      <a href="https://www.instagram.com/crs.bv" target="_blank" aria-label="Instagram"
-        ><i class="fab fa-instagram"></i
-      ></a>
-      <a href="https://www.facebook.com/profile.php?id=61555961771531" target="_blank" aria-label="Facebook"
-        ><i class="fab fa-facebook"></i
-      ></a>
-      <a href="https://t.snapchat.com/2NtGdQGd" target="_blank" aria-label="Snapchat"
-        ><i class="fab fa-snapchat-ghost"></i
-      ></a>
+      <a href="https://instagram.com/your-username" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/your-username" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://snapchat.com/add/your-username" target="_blank"><i class="fab fa-snapchat-ghost"></i></a>
+      <a href="my-work.html" class="work-link">My Projects</a>
     </div>
   </div>
+
+  <!-- Business email box (also hidden at first) -->
+  <div class="email-box hidden" id="email-box">
+    <p>💬 secretary@bivolcristian.info</p>
+  </div>
+
+  <script>
+    function enterSite() {
+      const welcome = document.getElementById('welcome');
+      const main = document.getElementById('main-content');
+      const email = document.getElementById('email-box');
+
+      // Fade out welcome
+      welcome.classList.add('fade-out');
+      setTimeout(() => {
+        welcome.style.display = 'none';
+        main.classList.remove('hidden');
+        email.classList.remove('hidden');
+      }, 800); // Match fade time
+    }
+  </script>
 </body>
 </html>
