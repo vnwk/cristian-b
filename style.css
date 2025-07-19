@@ -1,18 +1,25 @@
+/* Background and layout */
 body {
   margin: 0;
   height: 100vh;
   background-image: url('https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg');
   background-size: cover;
   background-position: center;
+  font-family: 'Orbitron', sans-serif;
+  backdrop-filter: blur(5px);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Courier New', sans-serif;
-  backdrop-filter: blur(5px);
+  overflow: hidden;
 }
 
+/* Centered content */
 .center-content {
   text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
 }
 
 .center-content h1 {
@@ -42,6 +49,141 @@ body {
 
 .socials a:hover {
   transform: translateY(-5px);
+  color: #13151233;
+}
+
+/* Welcome overlay */
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: opacity 0.8s ease;
+}
+
+.welcome-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.welcome-screen h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.welcome-screen button {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.welcome-screen button:hover {
+  transform: scale(1.1);
+  background-color: #13151233;
+}
+
+/* Email box at bottom */
+.email-box {
+  position: fixed;
+  bottom: 20px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* Fade in animation (used after welcome) */
+.hidden {
+  opacity: 0;
+}
+
+#main-content:not(.hidden),
+#email-box:not(.hidden) {
+  opacity: 1;
+}
+
+/* My Work page styles */
+body.work-page {
+  background: #000 url('https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg') center/cover no-repeat;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  padding: 40px 20px;
+  min-height: 100vh;
+  backdrop-filter: blur(5px);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.back-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.back-link:hover {
+  color: #13151233;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.02);
+}
+
+.project h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #13151233;
+  text-decoration: none;
+}
+
+.project a:hover {
   color: #13151233;
 }
 
