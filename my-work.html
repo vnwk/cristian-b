@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Work</title>
+  <!-- Import Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(6px);
+      color: #ffffff;
+    }
+
+    .overlay {
+      background-color: #13151233;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 20px;
+      background-color: rgba(19, 21, 18, 0.7);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
+
+    .project {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    }
+
+    .project h2 {
+      color: #ffffff;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .project p {
+      font-size: 1rem;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      border: 1px solid #ffffff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: 0.3s ease;
+      font-weight: 600;
+    }
+
+    .project a:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .back-home {
+      display: block;
+      text-align: center;
+      margin-top: 50px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .back-home:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 40px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>My Work</h1>
+
+    <div class="project">
+      <h2>Neon Tycoon</h2>
+      <p>A fast-paced Roblox tycoon game featuring dynamic lighting, upgrades, and multiplayer battles. Reached over 75,000+ visits and gained 4,000+ favorites within 2 months of launch.</p>
+      <a href="https://roblox.com/games/neon-tycoon" target="_blank">View Game</a>
+    </div>
+
+    <div class="project">
+      <h2>Blade Rush: Arena</h2>
+      <p>Designed and scripted a competitive sword-fighting game using Roblox’s Luau scripting language. Featured by several gaming YouTubers and peaked at 500 concurrent players.</p>
+      <a href="https://roblox.com/games/blade-rush-arena" target="_blank">View Game</a>
+    </div>
+
+    <div class="project">
+      <h2>Local Café Online Menu</h2>
+      <p>Helped a small café in my community set up a digital menu and ordering system using HTML, CSS, and Google Forms. Increased online orders by 40% within the first two weeks.</p>
+      <a href="#">View Case Study</a>
+    </div>
+
+    <div class="project">
+      <h2>Instagram Strategy for Handmade Seller</h2>
+      <p>Worked with a handmade craft seller to optimize their Instagram page and branding. Created visual templates, suggested captions, and helped grow followers by 300% in 3 months.</p>
+      <a href="#">View Project</a>
+    </div>
+
+    <div class="project">
+      <h2>Personal Portfolio Site</h2>
+      <p>Designed and built this site from scratch using HTML, CSS, and GitHub Pages. Focused on animation, clean layout, and mobile responsiveness.</p>
+      <a href="index.html" target="_blank">View Site</a>
+    </div>
+
+    <div class="project">
+      <h2>Discord Bot: TaskTracker</h2>
+      <p>Developed a simple Python-based Discord bot to manage tasks and reminders for a friend group. Includes slash commands, daily digests, and project-specific tagging.</p>
+      <a href="https://github.com/your-bot-repo" target="_blank">View Code</a>
+    </div>
+
+    <a class="back-home" href="index.html">← Back to Home</a>
+  </div>
+</body>
+</html>
